@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pCH-DS-Iza">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Wall-->
+        <scene sceneID="VHl-Vr-WgF">
+            <objects>
+                <collectionViewController storyboardIdentifier="ImageWallCollection" id="0DV-B0-aUI" customClass="ImageWallCollectionVC" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6Af-3w-Anw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eIy-rp-emA" customClass="ImageWallLayout">
+                            <size key="itemSize" width="185" height="191"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="Ow5-1F-G3T" customClass="ImageWallCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="185" height="191"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c3T-yr-Rp5">
+                                            <rect key="frame" x="0.0" y="0.0" width="185" height="191"/>
+                                            <gestureRecognizers/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="c3T-yr-Rp5" secondAttribute="bottom" constant="-8" id="F5N-RM-u31"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="c3T-yr-Rp5" secondAttribute="trailing" constant="-8" id="JLO-OV-ftg"/>
+                                    <constraint firstAttribute="centerX" secondItem="c3T-yr-Rp5" secondAttribute="centerX" id="WDs-TG-WU0"/>
+                                    <constraint firstAttribute="centerY" secondItem="c3T-yr-Rp5" secondAttribute="centerY" id="ceq-Aj-qQZ"/>
+                                    <constraint firstItem="c3T-yr-Rp5" firstAttribute="top" secondItem="Ow5-1F-G3T" secondAttribute="topMargin" constant="-8" id="kyH-wq-8Vj"/>
+                                    <constraint firstItem="c3T-yr-Rp5" firstAttribute="leading" secondItem="Ow5-1F-G3T" secondAttribute="leadingMargin" constant="-8" id="q6r-G5-Ull"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageContainer" destination="c3T-yr-Rp5" id="KB2-HU-Ld1"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="0DV-B0-aUI" id="LaR-cc-iWh"/>
+                            <outlet property="delegate" destination="eIy-rp-emA" id="jMX-dO-Gne"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Image Wall" id="Vrp-lI-uAU"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fK-Gp-b9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463" y="188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mcq-k3-06a">
+            <objects>
+                <navigationController id="pCH-DS-Iza" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Owh-Q6-rV4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0DV-B0-aUI" kind="relationship" relationship="rootViewController" id="eve-66-l1h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Liv-pI-Ujp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601" y="489"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeHolder.jpg" width="400" height="400"/>
+    </resources>
+</document>
