@@ -7,13 +7,14 @@ Image Wall
 
 ---
 
-![iPhone Layout](http://www.agmotif.com/tutorials/imagewall/images/iphonePortrait.png)
 
 **iPhone layout** 
 
+![iPhone Layout](http://www.agmotif.com/tutorials/imagewall/images/iphonePortrait.png)
+
 ---
 
-![iPad Layout](http://www.agmotif.com/tutorials/imageWall/images/ipadPortrait.png)
-
 **iPad layout**
+
+![iPad Layout](http://www.agmotif.com/tutorials/imageWall/images/ipadPortrait.png)
 
